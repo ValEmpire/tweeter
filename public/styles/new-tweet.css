@@ -1,0 +1,19 @@
+.new-tweet-textarea {
+  width: 100%;
+  border-width: 0 0 3px;
+  background-color: transparent;
+}
+
+.new-tweet-form-footer{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-tweet-form-button {
+    background-color: #4056A1;
+    border: none;
+    color: white;
+    padding: 5px 16px;
+    cursor: pointer;
+}
