@@ -9,6 +9,8 @@ nav {
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  position: fixed;
+  top:0;
 }
 
 .logo {

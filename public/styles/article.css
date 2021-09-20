@@ -1,0 +1,35 @@
+.article {
+  border-style: solid;
+}
+
+.article:hover {
+  box-shadow: 10px 10px #888888;
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-footer {
+  display: flex;
+  border-top-style: solid;
+  justify-content: space-between;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+}
+
+.button-icon {
+  color: #4056A1;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.button-icon:hover {
+  opacity: 0.5;
+}
