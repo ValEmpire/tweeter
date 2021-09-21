@@ -62,10 +62,14 @@ const loadtweets = function() {
 loadtweets();
 
 // Submit
-$( "#new-tweet-textarea" ).submit(function(event) {
+$( "#new-tweet-textarea" ).submit(function (event) {
   event.preventDefault();
 
   const $data = $(this).serialize();
+
+  if (event.target.text.value === '') return alert('Text cannot be empty.');
+
+  if (event.target.text.value.length > 140) return alert('Text is too long.');
 
   this.reset();
 
