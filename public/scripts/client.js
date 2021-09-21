@@ -60,7 +60,7 @@ const createTweetElement = function(tweet) {
 
   <footer class='article-footer pt-2'>
     <div class=footer-date>
-      <small>${tweet.created_at}</small>
+      <small>${timeago.format(tweet.created_at)}</small>
     </div>
     <div class="footer-action">
       <button class='button-icon'>
@@ -80,3 +80,16 @@ const createTweetElement = function(tweet) {
 }
 
 renderTweets(data);
+
+// Submit
+$( "#new-tweet-textarea" ).submit(function( event ) {
+  event.preventDefault();
+
+  const $data = $(this).serialize();
+
+  $.post('/tweets', $data, function(response){
+    console.log(response);
+  });
+
+
+});
