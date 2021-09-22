@@ -65,15 +65,29 @@ loadtweets();
 $( "#new-tweet-textarea" ).submit(function (event) {
   event.preventDefault();
 
+  $("#error").hide();
+
   const $data = $(this).serialize();
 
-  if (event.target.text.value === '') return alert('Text cannot be empty.');
+  if (event.target.text.value === ''){
+    $("#error").slideDown('slow', () => {
+      $("#error-message").html("Tweet cannot be empty.")
+    });
+    return;
+  }
 
-  if (event.target.text.value.length > 140) return alert('Text is too long.');
-
+  if (event.target.text.value.length > 140) {
+    $("#error").slideDown('slow', () => {
+      $("#error-message").html("Tweet cannot exceeds more than 140 characters.")
+    });
+    return;
+  }
   this.reset();
 
   $.post('/tweets', $data, function(res){
     loadtweets();
   });
 });
+
+$( "#error" ).hide();
+

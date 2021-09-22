@@ -79,3 +79,7 @@ main {
 .p-4 {
   padding: 20px;
 }
+
+.c-red {
+  color: red;
+}

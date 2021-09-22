@@ -29,6 +29,9 @@
     <!-- Form CSS -->
     <link rel="stylesheet" href="/styles/article.css" type="text/css" />
 
+    <!-- Form CSS -->
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -67,11 +70,18 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+      <!-- Error message -->
+      <section id='error' class='p-4 c-red'>
+        <i class="fas fa-exclamation-triangle"></i>
+        <span id='error-message'></span>
+        <i class="fas fa-exclamation-triangle"></i>
+      </section>
+
       <!-- New Tweet Form -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id='new-tweet-textarea' class='new-tweet-form'>
-          <textarea maxlength="140" placeholder='What are you humming about?' class='new-tweet-textarea' name="text" id="tweet-text"></textarea>
+          <textarea placeholder='What are you humming about?' class='new-tweet-textarea' name="text" id="tweet-text"></textarea>
           <div class='new-tweet-form-footer'>
             <button class='new-tweet-form-button' type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text" id='counter'></output>
