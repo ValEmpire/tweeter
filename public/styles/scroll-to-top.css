@@ -1,0 +1,15 @@
+#scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 10px 17px;
+  border-radius: 50%;
+  background-color: red;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+#scroll-to-top > i {
+  color: white;
+  font-size: 40px;
+}
