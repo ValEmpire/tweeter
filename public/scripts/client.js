@@ -59,35 +59,52 @@ const loadtweets = function() {
   });
 }
 
-loadtweets();
-
 // Submit
 $( "#new-tweet-textarea" ).submit(function (event) {
+  // get the self from this
+  const self = this;
+
+  // prevent page from refreshing after submit
   event.preventDefault();
 
+  // hides the error message after each submit
   $("#error").hide();
 
   const $data = $(this).serialize();
 
+  // check if text value is blank
   if (event.target.text.value === ''){
-    $("#error").slideDown('slow', () => {
-      $("#error-message").html("Tweet cannot be empty.")
+    // show error message
+    $("#error").slideDown('fast', () => {
+      $("#error-message").html(errorMessage('Tweets cannot be empty.'));
     });
+
     return;
   }
 
+  // check if text characters is more than 140
   if (event.target.text.value.length > 140) {
+    // show error message
     $("#error").slideDown('slow', () => {
-      $("#error-message").html("Tweet cannot exceeds more than 140 characters.")
+      $("#error-message").html(errorMessage('Tweets cannot exceed more than 140 characters.'));
     });
+
     return;
   }
-  this.reset();
 
   $.post('/tweets', $data, function(res){
+    // reset the form after successful submission
+    self.reset();
+
+    // reload tweets
     loadtweets();
   });
 });
 
-$( "#error" ).hide();
 
+// Initialize
+$("#error").hide();
+
+$("#new-tweet-form").hide();
+
+loadtweets();
