@@ -1,5 +1,5 @@
 const createTweetElement = function(tweet) {
-  let $tweet = `<article class='article p-3 mt-4'>
+  let $tweet = `<article class='article p-3 mb-4'>
     <header class='article-header'>
       <div class='header-profile'>
         <div class='profile-picture'>
@@ -104,7 +104,5 @@ $( "#new-tweet-textarea" ).submit(function (event) {
 
 // Initialize
 $("#error").hide();
-
-$("#new-tweet-form").hide();
 
 loadtweets();

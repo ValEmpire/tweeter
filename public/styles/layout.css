@@ -32,54 +32,30 @@ main {
   margin-right: auto;
 }
 
-.pt-1 {
-  padding-top:5px;
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (max-width: 1024px) {
+  .hidden {
+    height: 120px;
+  }
 }
 
-.pt-2 {
-  padding-top: 10px;
-}
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  main {
+    display: flex;
+  }
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  section.head {
+    flex-grow: 1;
+    padding: 30px;
+  }
 
-.pt-3 {
-  padding-top: 15px;
-}
+  section.content {
+    flex-grow: 2;
+  }
 
-.pt-4 {
-  padding-top: 20px;
-}
-
-.mt-1 {
-  margin-top: 5px;
-}
-
-.mt-2 {
-  margin-top: 10px;
-}
-
-.mt-3 {
-  margin-top: 15px;
-}
-
-.mt-4 {
-  margin-top: 20px;
-}
-
-.p-1 {
-  padding: 5px;
-}
-
-.p-2 {
-  padding: 10px;
-}
-
-.p-3 {
-  padding: 15px;
-}
-
-.p-4 {
-  padding: 20px;
-}
-
-.c-red {
-  color: red;
+  .hidden {
+    height: 180px;
+  }
 }

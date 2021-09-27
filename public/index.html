@@ -20,6 +20,9 @@
     <!-- Nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
+    <!-- Spacing CSS -->
+    <link rel="stylesheet" href="/styles/spacing.css" type="text/css" />
+
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
@@ -60,41 +63,50 @@
       </div>
     </nav>
 
-    <header class='profile'>
-      <div>
-          <img src="/images/profile-hex.png" />
-      </div>
-      <br>
-      <div>
-          <h2>Arcival Palma</h2>
-      </div>
-    </header>
+    <!-- This is to cover the height of the nav -->
+    <div class='hidden'></div>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
 
-      <!-- Error message -->
-      <section id='error' class='p-4 c-red'>
-        <span id='error-message'></span>
-      </section>
-
-      <!-- New Tweet Form -->
-      <section id='new-tweet-form' class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form id='new-tweet-textarea' class='new-tweet-form'>
-          <textarea placeholder='What are you humming about?' class='new-tweet-textarea' name="text" id="tweet-text"></textarea>
-          <div class='new-tweet-form-footer'>
-            <button class='new-tweet-form-button' type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text" id='counter'></output>
+      <section class='head'>
+        <!-- profile -->
+        <header class='profile'>
+          <div>
+              <img src="/images/profile-hex.png" />
           </div>
-        </form>
+          <br>
+          <div>
+              <h2>Arcival Palma</h2>
+          </div>
+        </header>
       </section>
 
-      <!-- Tweets Container -->
-      <section id='tweets-container' class='tweets-container pt-4 mt-4'></section>
+      <section class='content'>
+        <!-- Error message -->
+        <div id='error' class='p-4 c-red'>
+          <span id='error-message'></span>
+        </div>
 
-      <section><button id='scroll-to-top'><i class="fas fa-angle-double-up"></i></button></section>
+        <!-- New Tweet Form -->
+        <div id='new-tweet-form' class="new-tweet mb-4">
+          <h2>Compose Tweet</h2>
+          <form id='new-tweet-textarea' class='new-tweet-form'>
+            <textarea placeholder='What are you humming about?' class='new-tweet-textarea' name="text" id="tweet-text"></textarea>
+            <div class='new-tweet-form-footer'>
+              <button class='new-tweet-form-button' type="submit">Tweet</button>
+              <strong><output name="counter" class="counter" for="tweet-text" id='counter'></output></strong>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tweets Container -->
+        <div id='tweets-container' class='tweets-container mb-4'></div>
+      </section>
     </main>
+
+    <!-- Scroll to top button -->
+    <section><button id='scroll-to-top'><i class="fas fa-angle-double-up"></i></button></section>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/message.js"></script>
