@@ -8,3 +8,7 @@
   background-image: url("/images/brick-wall.png");
   background-color: grey;
 }
+
+.profile-name {
+  color: white;
+}
