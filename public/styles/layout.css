@@ -48,7 +48,7 @@ main {
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
   section.head {
     flex-grow: 1;
-    padding: 30px;
+    padding: 0 30px;
   }
 
   section.content {
